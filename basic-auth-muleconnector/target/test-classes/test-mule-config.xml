@@ -1,0 +1,19 @@
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:basic-auth="http://www.mulesoft.org/schema/mule/basic-auth"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/basic-auth http://www.mulesoft.org/schema/mule/basic-auth/current/mule-basic-auth.xsd">
+
+    <basic-auth:config name="config" configId="configId">
+        <basic-auth:connection requiredParameter="aValue" />
+    </basic-auth:config>
+
+    <flow name="sayHiFlow">
+        <basic-auth:say-hi person="Mariano Gonzalez"/>
+    </flow>
+
+    <flow name="retrieveInfoFlow">
+        <basic-auth:retrieve-info config-ref="config"/>
+    </flow>
+
+</mule>

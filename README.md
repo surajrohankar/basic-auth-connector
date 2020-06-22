@@ -1,0 +1,3 @@
+# Basic Auth Connector
+As we know some of the API's works on Basic Authentication(Username and Password). We have to provide correct Usernam and Password to access such type of API's.
+This connector have created for showing how we can implement the logic for basic authentication in your connector and it works.  
